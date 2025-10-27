@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Small terminal styling helpers (ANSI) with TTY detection and fallback."""
+
 from __future__ import annotations
 
 import os

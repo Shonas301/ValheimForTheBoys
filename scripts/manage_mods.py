@@ -14,8 +14,9 @@ import logging
 import shutil
 import sys
 from pathlib import Path
-from term import action, note, warn, meta
+
 from fetch_mods import fetch_and_unpack
+from term import action, note
 
 INSTALL_LOC = Path("/mnt/c/Program Files (x86)/Steam/steamapps/common/Valheim/")
 MODDIR = INSTALL_LOC / "BepInEx" / "plugins"

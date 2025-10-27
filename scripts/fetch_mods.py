@@ -14,8 +14,8 @@ from pathlib import Path
 from typing import List
 from urllib.parse import urlsplit
 
+from term import action, meta, note, warn
 from unpack_raw_mods import unpack_all
-from term import action, note, warn, meta
 
 try:
     import requests  # type: ignore

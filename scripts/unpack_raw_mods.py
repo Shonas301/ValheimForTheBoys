@@ -12,7 +12,8 @@ import argparse
 import logging
 import shutil
 from pathlib import Path
-from term import action, note, warn, meta
+
+from term import action, meta, note, warn
 
 
 def unpack_all(raw_dir: Path, remove_archive: bool = False) -> int:
@@ -43,7 +44,11 @@ def unpack_all(raw_dir: Path, remove_archive: bool = False) -> int:
             logging.exception(warn(f"Failed to unpack {p.name}"))
             skipped.append(p.name)
 
-    logging.info(meta(f"Extraction complete. Extracted: {len(extracted)}, Skipped: {len(skipped)}"))
+    logging.info(
+        meta(
+            f"Extraction complete. Extracted: {len(extracted)}, Skipped: {len(skipped)}"
+        )
+    )
     if extracted:
         for a, t in extracted:
             logging.info(note(f" - {a} -> {t}"))
